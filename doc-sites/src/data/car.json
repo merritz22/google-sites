@@ -1,0 +1,26 @@
+[
+    {
+        "id":1,
+        "marque": "Rockey",
+        "prix": 3555851,
+        "annee": 210
+    },
+    {
+        "id":2,
+        "marque": "Rockey",
+        "prix": 355741,
+        "annee": 2022
+    },
+    {
+        "id":3,
+        "marque": "Rockey",
+        "prix": 3551,
+        "annee": 2020
+    },
+    {
+        "id":4,
+        "marque": "Rockey",
+        "prix": 145551,
+        "annee": 2027
+    }
+]
