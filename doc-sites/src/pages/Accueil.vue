@@ -1,5 +1,6 @@
 <script setup>
 import Navigation from '../components/Navigation.vue';
+import SideBar from '../components/SideBar.vue';
 
 
 </script>
@@ -7,6 +8,7 @@ import Navigation from '../components/Navigation.vue';
 <template>
   <div class="accueil">
     <Navigation/>
+    <SideBar/>
   </div>
 </template>
 

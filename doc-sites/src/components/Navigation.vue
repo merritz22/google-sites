@@ -92,7 +92,6 @@
 
     .text{
         font-size: 12px;
-        cursor: crosshair;
     }
 
 
