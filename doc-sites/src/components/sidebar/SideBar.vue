@@ -1,4 +1,5 @@
 <script setup>
+    import GridPanel from './sidebar-components/GridPanel.vue';
     const active = false
 </script>
 
@@ -9,7 +10,7 @@
             <h1 class="tools-links">Pages</h1>
             <h1 class="tools-links">Insert</h1>
         </div>
-        
+        <GridPanel/>
     </aside>
 </template>
 
