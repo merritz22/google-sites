@@ -1,6 +1,7 @@
 <script setup>
 import Navigation from '../components/Navigation.vue';
 import SideBar from '../components/sidebar/SideBar.vue';
+import WorkingPanel from '../components/WorkingPanel.vue';
 
 
 </script>
@@ -9,6 +10,7 @@ import SideBar from '../components/sidebar/SideBar.vue';
   <div class="accueil">
     <Navigation/>
     <SideBar/>
+    <WorkingPanel/>
   </div>
 </template>
 

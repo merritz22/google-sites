@@ -2,9 +2,30 @@
 
 <template>
     <span class="other-tools">
-            <i class="fa fa-list" aria-hidden="true"></i>
-            <h1>Table of contents</h1>
+        <fa class="single-component" icon="fa-solid fa-list" />
+        <h1>Table of Contents</h1>
     </span>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.other-tools{
+    margin-top: 20px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        height: 50px;
+
+        &:hover{
+            cursor: pointer;
+        }
+
+        .single-component{
+            margin-left: 15px;
+            width: 40px;
+            height: 40px;
+        }
+        h1{
+            margin-left: 10px;
+        }
+    }
+</style>

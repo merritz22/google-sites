@@ -3,20 +3,20 @@
 <template>
     <div class="grid-panel">
             <div>
-                <i style="color: blue;" class="fa fa-font fa-2x" aria-hidden="true"></i>
+                <fa class="grid-img" icon="fa-solid fa-font" style="color: blue;"/>
                 <h1>Text box</h1>
             </div>
             <div>
-                <i style="color: red;" class="fa fa-picture-o fa-2x" aria-hidden="true"></i>
+                <fa class="grid-img" icon="fa-solid fa-image" style="color: red;" />
                 <h1>Images</h1>
             </div>
             <div>
-                <i class="fa fa-code fa-2x" aria-hidden="true"></i>
+                <fa class="grid-img" icon="fa-solid fa-wand-magic-sparkles" style="color: yellow;" />
                 <h1>Embed</h1>
             </div>
             <div>
-                <i class="fa-solid fa-code" aria-hidden="true"></i>
-                <h1>Nothing yet</h1>
+                <fa class="grid-img" icon="fa-solid fa-link" />
+                <h1>Links</h1>
             </div>
         </div>
 </template>
@@ -26,6 +26,7 @@
         display: grid;
         grid-template-rows: auto;
         grid-template-columns: 125px 125px;
+        border-bottom: 1px solid gray;
 
         div{
             margin-left: auto;
@@ -33,9 +34,25 @@
             margin-top: 10px;
             display: block;
             align-items: center;
+            cursor: pointer;
+            transition: font-size 20s ease-in-out;
+
+            &:hover{
+                h1{
+                    color: gray;
+                    font-size: 16px;
+                }
+            }
 
             h1{
-                font-size: 12px;
+                font-size: 14px;
+                width: 100%;
+                text-align: center;
+            }
+
+            .grid-img{
+                width: 50px;
+                height: 50px;
             }
         }
     }

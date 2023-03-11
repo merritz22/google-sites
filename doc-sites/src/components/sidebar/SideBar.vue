@@ -1,6 +1,16 @@
 <script setup>
     import GridPanel from './sidebar-components/GridPanel.vue';
-    const active = false
+    import CollapseComponent from './sidebar-components/CollapseComponent.vue';
+    import TableOfContentsComponent from './sidebar-components/TableOfContentsComponent.vue';
+    import ImageCarousselComponent from './sidebar-components/ImageCarousselComponent.vue';
+    import ButtonComponent from './sidebar-components/ButtonComponent.vue';
+    import DividerComponent from './sidebar-components/DividerComponent.vue';
+    import SocialLinksComponent from './sidebar-components/SocialLinksComponent.vue';
+    import PlaceholderComponent from './sidebar-components/PlaceholderComponent.vue';
+    import CalendarComponent from './sidebar-components/CalendarComponent.vue'
+    import MapComponent from './sidebar-components/MapComponent.vue';
+    import DocsComponent from './sidebar-components/DocsComponent.vue';
+    import ChartComponent from './sidebar-components/ChartComponent.vue';
 </script>
 
 <template>
@@ -11,6 +21,17 @@
             <h1 class="tools-links">Insert</h1>
         </div>
         <GridPanel/>
+        <CollapseComponent/>
+        <TableOfContentsComponent/>
+        <ImageCarousselComponent/>
+        <ButtonComponent/>
+        <DividerComponent/>
+        <SocialLinksComponent/>
+        <PlaceholderComponent/>
+        <CalendarComponent/>
+        <MapComponent/>
+        <DocsComponent/>
+        <ChartComponent/>
     </aside>
 </template>
 
@@ -20,14 +41,17 @@
         display: flex;
         flex-direction: column;
         width: 250px;
-        min-height: 85%;
+        height: 99%;
         overflow: hidden;
         position: fixed;
-        margin-top: 106px;
+        margin-top: 60px;
+        overflow-y: scroll;
+        scrollbar-color: gray;
 
         background: none;
         color: #ffff;
-        box-shadow: 1px 2px gray;
+        border-right: 1px solid gray;
+
 
         @media (max-width: 768px) {
             position: fixed;
@@ -42,22 +66,23 @@
         justify-content: space-between;
         width: 100%;
         height: 50px;
-        border: 2px solid blue;
+        border-bottom: 1px solid gray;
         margin: 0;
 
         .tools-links{
             transition: .5s ease all;
-            padding-bottom: 4px;
-            border-bottom: 1px solid transparent;
-            margin-left: 10px;
+            padding-bottom: 6px;
+            border-bottom: 6px solid transparent;
+            margin-left: 8px;
             margin-right: 10px;
             height: 22px;
 
             &:hover{
                 color: #ffff;
-                border-color:#ffff;
+                border-color:gray;
                 cursor: pointer;
             }
         }
     }
+
 </style>

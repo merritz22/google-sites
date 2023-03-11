@@ -11,7 +11,7 @@
                 <h1 class="title">Merritz-Lab</h1>
             </div>
             <div class="navigation">
-                <li class="text">MeKA save your work</li>
+                <li class="text">M<b style="color: red;">e</b>KA save your work</li>
                 <li>
                     <RouterLink to="/" class="link">
                         <fa class="fa" icon="fa-solid fa-reply" />
