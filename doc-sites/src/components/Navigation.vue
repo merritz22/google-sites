@@ -1,6 +1,7 @@
 <script setup>
     import { Icon } from '@iconify/vue';
     const scrollPosition = null
+    const title = 'Merritz-Lab'
 </script>
 
 <template>
@@ -8,7 +9,7 @@
         <nav>
             <div class="branding">
                 <img src="@/assets/logo.png" alt=""/>
-                <h1 class="title">Merritz-Lab</h1>
+                <input class="title" :value="title"/>
             </div>
             <div class="navigation">
                 <li class="text">
@@ -122,6 +123,14 @@
 
     .text{
         font-size: 12px;
+    }
+
+    .title{
+        text-transform: uppercase;
+        background: none;
+        border: none;
+        font-size: 20px;
+        color: #ffff;
     }
 
 </style>
