@@ -1,8 +1,10 @@
-<script setup></script>
+<script setup>
+    import { Icon } from '@iconify/vue';
+</script>
 
 <template>
     <span class="other-tools">
-        <fa class="single-component" icon="fa-solid fa-table-columns" />
+        <Icon icon="carbon:carousel-horizontal" width="30" height="30" />
         <h1>Image carousel</h1>
     </span>
 </template>
@@ -19,10 +21,8 @@
             cursor: pointer;
         }
 
-        .single-component{
+        svg{
             margin-left: 15px;
-            width: 40px;
-            height: 40px;
         }
         h1{
             margin-left: 10px;

@@ -11,6 +11,7 @@
     import MapComponent from './sidebar-components/MapComponent.vue';
     import DocsComponent from './sidebar-components/DocsComponent.vue';
     import ChartComponent from './sidebar-components/ChartComponent.vue';
+    import ContentBlock from './sidebar-components/ContentBlock.vue';
 </script>
 
 <template>
@@ -21,6 +22,7 @@
             <h1 class="tools-links">Insert</h1>
         </div>
         <GridPanel/>
+        <ContentBlock/>
         <CollapseComponent/>
         <TableOfContentsComponent/>
         <ImageCarousselComponent/>
@@ -41,7 +43,7 @@
         display: flex;
         flex-direction: column;
         width: 250px;
-        height: 99%;
+        height: 90%;
         overflow: hidden;
         position: fixed;
         margin-top: 60px;
@@ -84,5 +86,7 @@
             }
         }
     }
+
+
 
 </style>

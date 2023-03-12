@@ -1,8 +1,10 @@
-<script setup></script>
+<script setup>
+    import { Icon } from '@iconify/vue';
+</script>
 
 <template>
     <span class="other-tools">
-        <fa class="single-component" icon="fa-solid fa-up-down" />
+        <Icon icon="pajamas:collapse" width="30" height="30" />
         <h1>Collapsible group</h1>
     </span>
 </template>
@@ -19,12 +21,8 @@
             cursor: pointer;
         }
 
-        .single-component{
+        svg{
             margin-left: 15px;
-            width: 40px;
-            height: 40px;
-            border-top: 3px solid #ffff;
-            border-bottom: 3px solid #ffff;
         }
         h1{
             margin-left: 10px;

@@ -19,8 +19,12 @@ import WorkingPanel from '../components/WorkingPanel.vue';
     margin: 0;
   }
   body{
+    min-width: 950px;
+    max-width: 1350px;
     background-image: url("../assets/hero-bg.png");
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   }
-  i{font-size: 20px;}
+  svg{
+    cursor: pointer;
+  }
 </style>
