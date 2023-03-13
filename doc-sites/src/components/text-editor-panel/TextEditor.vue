@@ -1,31 +1,35 @@
 <script setup>
     import { Icon } from '@iconify/vue';
-    import { ref } from 'vue';
+    import { ref, defineEmits } from 'vue';
     import textData from '../../data/working-panel-data/textData.json';
     import FontFamily from '../font/FontFamily.vue'
 
 
     const textD = ref(textData)
     const showFontsList = ref(false)
+    const emit = defineEmits(['update-font-family'])
 
-    const fontSizeEvent = ()=>{
-        textD.value[0].fontSize += 12
-        console.log(textD.value[0].fontSize)
-    }
-
-    function switches() {
+    function switches(e) {
         showFontsList.value = !showFontsList.value
     }
+
+    function font(e,f) {
+        textD.value.fontFamily = e
+        f.value != f.value
+        showFontsList.value = f.value
+    }
+
 </script>
 
 <template>
-    <div class="text-style-panel">
+    <div class="text-style-panel" >
         <div class="title">
             <input class="title-name" type="text" value="Title1">
         </div>
         <div class="font-style">
             <FontFamily class="font-family-style"
-                :share="showFontsList" />
+                :share="showFontsList" 
+                @changed-font-family="font"/>
             <Icon @click="switches"
                 v-show="!showFontsList" 
                 icon="ic:round-arrow-drop-down" 

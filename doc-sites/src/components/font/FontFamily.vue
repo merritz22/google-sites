@@ -1,6 +1,7 @@
 <script setup>
-    import { ref } from 'vue';
+    import { ref, defineEmits } from 'vue';
     import fontfamilies from '../../data/working-panel-data/font-family.json';
+    import textD from '../../data/working-panel-data/textData.json'
 
     const props = defineProps({
         share:{
@@ -14,13 +15,15 @@
         }
     })
 
-    const family = ref('Franklin Gothic Medium')
+    const emit = defineEmits(['changed-font-family'])
+
+    const family = ref(textD[0].fontFamily)
     const showFonts = ref(props.share)
 
     function fontFamilySelected(e) {
         family.value = e.target.innerText
         showFonts.value = false
-        console.log(family.value)
+        emit('changed-font-family',family,showFonts)
     }
 </script>
 
