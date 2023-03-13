@@ -2,6 +2,7 @@
     import { Icon } from '@iconify/vue';
     import { ref } from 'vue';
     import textData from '../../data/working-panel-data/textData.json';
+    import FontFamily from '../font/FontFamily.vue'
 
 
     const textD = ref(textData)
@@ -15,10 +16,11 @@
 <template>
     <div class="text-style-panel">
         <div class="title">
-            Title <Icon icon="ic:round-arrow-drop-down" width="25" height="25" />
+            <input class="title-name" type="text" value="Title1">
         </div>
         <div class="font-style">
-            Monospace <Icon icon="ic:round-arrow-drop-down" width="25" height="25" />
+            <FontFamily class="font-family-style"/>
+            <Icon icon="ic:round-arrow-drop-down" width="25" height="25" />
         </div>
         <div @click="fontSizeEvent" class="font-size">
             64 <Icon icon="ic:round-arrow-drop-down" width="25" height="25" />
@@ -82,6 +84,24 @@
             display: flex;
             justify-content: space-between;
             width: 150px;
+        }
+
+        .title-name{
+            width: 90%;
+            font-size: 18px;
+            border: none;
+            background: none;
+            outline: none;
+        }
+
+        .font-style{
+            width: 150px;
+        }
+        .font-family-style{
+            width: 80%;
+            background: none;
+            border: none;
+            font-size: 18px;
         }
     }
 </style>

@@ -3,21 +3,26 @@
     import TextEditor from './TextEditor.vue';
     import textData from '../../data/working-panel-data/textData.json';
 
-    const showEditorPanel = true
+    const showEditorPanel = ref(true)
+    const isdraggable = true
     const textD = ref(textData)
 
-    let css = ""
+    function showTextEditor(){
+        showEditorPanel.value = true
+    }
 
-    const fontSizeEvent = (e)=>{
-        css = 'font-size-'.concat(textD.value[0].fontSize)
-        e.target.className += css.concat(' ')
-        console.log(e.target)
+    function hideTextEditor(){
+        showEditorPanel.value = false
     }
 </script>
 
 <template>
-    <TextEditor v-show="showEditorPanel"/>
-    <input @click="fontSizeEvent" type="text" value="Your website title"/>
+    <div class="text-editor-panel" :draggable="isdraggable">
+        <TextEditor v-show="showEditorPanel"/>
+        <input
+            type="text" 
+            value="Your website title"/>
+    </div>
 </template>
 
 <style lang="scss" scoped>
@@ -25,13 +30,12 @@
         font-size: 60px;
         background: none;
         border: none;
+        border-radius: 5px;
         text-transform: uppercase;
     }
 
-    .font-size-76{
-        font-size: 12px;
-    }
-    .font-size-76{
-        font-size: 40px;
+    .text-editor-panel{
+        display: block;
+        width: fit-content;
     }
 </style>
