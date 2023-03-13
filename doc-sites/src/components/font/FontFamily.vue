@@ -1,9 +1,21 @@
 <script setup>
     import { ref } from 'vue';
-import fontfamilies from '../../data/working-panel-data/font-family.json';
+    import fontfamilies from '../../data/working-panel-data/font-family.json';
+
+    const props = defineProps({
+        share:{
+            type: Boolean,
+            required: true,
+            computed:{
+                changed(){
+                    return !share
+                }
+            }
+        }
+    })
 
     const family = ref('Franklin Gothic Medium')
-    const showFonts = ref(true)
+    const showFonts = ref(props.share)
 
     function fontFamilySelected(e) {
         family.value = e.target.innerText
@@ -13,10 +25,10 @@ import fontfamilies from '../../data/working-panel-data/font-family.json';
 </script>
 
 <template>
-    <div class="select" :style="'font-family: '+family">
-        <div class="options" v-show="showFonts">
+    <div class="select font-family-style" :style="'font-family: \''+family">
+        <div class="options" v-show="share">
             <p v-for="font in fontfamilies.families"
-                :style="'font-family: '+font"
+                :style="'font-family: \''+font"
                 @click="fontFamilySelected"
                 >{{font}}</p>
         </div>

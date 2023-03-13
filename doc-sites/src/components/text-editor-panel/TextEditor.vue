@@ -6,10 +6,15 @@
 
 
     const textD = ref(textData)
+    const showFontsList = ref(false)
 
     const fontSizeEvent = ()=>{
         textD.value[0].fontSize += 12
         console.log(textD.value[0].fontSize)
+    }
+
+    function switches() {
+        showFontsList.value = !showFontsList.value
     }
 </script>
 
@@ -19,11 +24,19 @@
             <input class="title-name" type="text" value="Title1">
         </div>
         <div class="font-style">
-            <FontFamily class="font-family-style"/>
-            <Icon icon="ic:round-arrow-drop-down" width="25" height="25" />
+            <FontFamily class="font-family-style"
+                :share="showFontsList" />
+            <Icon @click="switches"
+                v-show="!showFontsList" 
+                icon="ic:round-arrow-drop-down" 
+                width="30" height="30" />
+            <Icon @click="switches"
+                v-show="showFontsList" 
+                icon="ic:round-arrow-drop-up" 
+                width="30" height="30" />
         </div>
         <div @click="fontSizeEvent" class="font-size">
-            64 <Icon icon="ic:round-arrow-drop-down" width="25" height="25" />
+            64 <Icon icon="ic:round-arrow-drop-down" width="30" height="30" />
         </div>
         <div class="style-sparkles">
             <div class="font-bold">
@@ -62,7 +75,7 @@
         transition: 2s ease all;
 
         .text-display,.font-size{
-            width: 40px;
+            width: 50px;
         }
 
         .bin{
@@ -98,7 +111,7 @@
             width: 150px;
         }
         .font-family-style{
-            width: 80%;
+            width: 70%;
             background: none;
             border: none;
             font-size: 18px;
