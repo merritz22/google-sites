@@ -17,7 +17,7 @@
         margin-left: 275px;
         position: fixed;
         border-radius: 5px;
-        width: 700px;
+        width: 900px;
         height: 90%;
         background-color: #ffff;
         transition: 1.5s ease all;

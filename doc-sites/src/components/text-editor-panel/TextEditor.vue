@@ -1,5 +1,15 @@
 <script setup>
     import { Icon } from '@iconify/vue';
+    import { ref } from 'vue';
+    import textData from '../../data/working-panel-data/textData.json';
+
+
+    const textD = ref(textData)
+
+    const fontSizeEvent = ()=>{
+        textD.value[0].fontSize += 12
+        console.log(textD.value[0].fontSize)
+    }
 </script>
 
 <template>
@@ -10,7 +20,7 @@
         <div class="font-style">
             Monospace <Icon icon="ic:round-arrow-drop-down" width="25" height="25" />
         </div>
-        <div class="font-size">
+        <div @click="fontSizeEvent" class="font-size">
             64 <Icon icon="ic:round-arrow-drop-down" width="25" height="25" />
         </div>
         <div class="style-sparkles">

@@ -1,0 +1,13 @@
+[
+    {
+        "type": "Title",
+        "fontFamily": "Helvetica",
+        "fontSize": 64,
+        "fontWeight": "normal",
+        "fontStyle": "normal",
+        "textDecoration": "none",
+        "color": "black",
+        "textAlign": "left",
+        "delete":false
+    }
+]
