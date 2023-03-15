@@ -1,0 +1,44 @@
+[
+    {
+        "id":1,
+        "name":"text-component",
+        "clientHeight": 85,
+        "clientLeft": 0,
+        "clientTop": 0,
+        "clientWidth": 732,
+        "visible":true,
+        "data":{
+            "id": 1,
+            "name":"Title",
+            "fontFamily": "Helvetica",
+            "fontSize": 60,
+            "fontWeight": "normal",
+            "fontStyle": "normal",
+            "textDecoration": "none",
+            "color": "black",
+            "textAlign": "left",
+            "delete":false
+        }
+    },
+    {
+        "id":2,
+        "name":"text-component",
+        "clientHeight": 205,
+        "clientLeft": 0,
+        "clientTop": 0,
+        "clientWidth": 732,
+        "visible":true,
+        "data":{
+            "id": 2,
+            "name":"Title",
+            "fontFamily": "Helvetica",
+            "fontSize": 60,
+            "fontWeight": "normal",
+            "fontStyle": "normal",
+            "textDecoration": "none",
+            "color": "black",
+            "textAlign": "left",
+            "delete":false
+        }
+    }
+]

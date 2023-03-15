@@ -6,7 +6,7 @@
     <div class="grid-panel">
             <div>
                 <Icon icon="ic:round-text-fields" color="blue" width="35" height="35" />
-                <h1>Text box</h1>
+                <h1>Title</h1>
             </div>
             <div>
                 <Icon icon="bi:image" color="red" width="35" height="35" />
@@ -14,7 +14,7 @@
             </div>
             <div>
                 <Icon icon="icomoon-free:embed" color="yellow" width="35" height="35" />
-                <h1>Embed</h1>
+                <h1>TextBox</h1>
             </div>
             <div>
                 <Icon icon="fxemoji:linksymbol" color="yellow" width="35" height="35" />

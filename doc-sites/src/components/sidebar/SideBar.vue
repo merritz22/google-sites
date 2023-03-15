@@ -12,6 +12,7 @@
     import DocsComponent from './sidebar-components/DocsComponent.vue';
     import ChartComponent from './sidebar-components/ChartComponent.vue';
     import ContentBlock from './sidebar-components/ContentBlock.vue';
+
 </script>
 
 <template>
@@ -39,7 +40,7 @@
 
 <style lang="scss" scoped>
     aside{
-        font-size: 14px;
+        font-size: 12px;
         display: flex;
         flex-direction: column;
         width: 250px;

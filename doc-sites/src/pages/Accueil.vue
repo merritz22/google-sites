@@ -22,7 +22,7 @@ import WorkingPanel from '../components/WorkingPanel.vue';
     min-width: 950px;
     max-width: 1350px;
     background-image: url("../assets/hero-bg.png");
-    font-family: 'Franklin Gothic Medium';
+    font-family: 'Courier New', Courier, monospace;
   }
   svg{
     cursor: pointer;
