@@ -1,13 +1,25 @@
 <script setup>
     import { ref } from 'vue';
     import ButtonComponent from './working-panel-components/ButtonComponent.vue';
-    import TextComponent from './text-editor-panel/TextComponent.vue';
-    import textCD from '../data/components/TextComponents.json'
+    import Router from './working-panel-components/Router.vue';
     
-    const components = ref(textCD)
+
+    const props = defineProps({
+        data:{
+            type:Object,
+            required:true,
+            computed:{
+                changed(){
+                    return data
+                }
+            }
+        }
+    })
+
+    const components = ref(props.data)
 
     function myEvent(e) {
-        console.log(e.el)
+        // console.log(e.el)
     }
 
 </script>
@@ -15,7 +27,8 @@
 <template>
     <section class="lab-panel">
         <ButtonComponent @vnode-mounted="myEvent"/>
-        <TextComponent v-for="component in components" :data="component.data"/>
+        <Router v-for="component in components" 
+            :data="component"/>
     </section>
 </template>
 
@@ -32,5 +45,6 @@
         transition: 1.5s ease all;
         // opacity: .35;
         text-align: center;
+        overflow-y: scroll;
     }
 </style>

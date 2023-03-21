@@ -1,7 +1,10 @@
 <script setup>
+import { ref, watch} from 'vue';
 import Navigation from '../components/Navigation.vue';
 import SideBar from '../components/sidebar/SideBar.vue';
 import WorkingPanel from '../components/WorkingPanel.vue';
+// import data from '../data/components/Components.json'
+const data = ref([])
 
 
 </script>
@@ -9,8 +12,8 @@ import WorkingPanel from '../components/WorkingPanel.vue';
 <template>
   <div class="accueil">
     <Navigation/>
-    <SideBar/>
-    <WorkingPanel/>
+    <SideBar :data="data"/>
+    <WorkingPanel :data="data"/>
   </div>
 </template>
 

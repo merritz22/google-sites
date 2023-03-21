@@ -1,4 +1,5 @@
 <script setup>
+    import { ref } from 'vue';
     import GridPanel from './sidebar-components/GridPanel.vue';
     import CollapseComponent from './sidebar-components/CollapseComponent.vue';
     import TableOfContentsComponent from './sidebar-components/TableOfContentsComponent.vue';
@@ -13,6 +14,17 @@
     import ChartComponent from './sidebar-components/ChartComponent.vue';
     import ContentBlock from './sidebar-components/ContentBlock.vue';
 
+    const props = defineProps({
+        data:{
+            type:Object,
+            required:true,
+            computed:{
+                changed(){
+                    return data
+                }
+            }
+        }
+    })
 </script>
 
 <template>
@@ -22,19 +34,19 @@
             <h1 class="tools-links">Pages</h1>
             <h1 class="tools-links">Insert</h1>
         </div>
-        <GridPanel/>
-        <ContentBlock/>
-        <CollapseComponent/>
-        <TableOfContentsComponent/>
-        <ImageCarousselComponent/>
-        <ButtonComponent/>
-        <DividerComponent/>
-        <SocialLinksComponent/>
-        <PlaceholderComponent/>
-        <CalendarComponent/>
-        <MapComponent/>
-        <DocsComponent/>
-        <ChartComponent/>
+        <GridPanel :data="data"/>
+        <ContentBlock :data="data"/>
+        <CollapseComponent :data="data"/>
+        <TableOfContentsComponent :data="data"/>
+        <ImageCarousselComponent :data="data"/>
+        <ButtonComponent :data="data"/>
+        <DividerComponent :data="data"/>
+        <SocialLinksComponent :data="data"/>
+        <PlaceholderComponent :data="data"/>
+        <CalendarComponent :data="data"/>
+        <MapComponent :data="data"/>
+        <DocsComponent :data="data"/>
+        <ChartComponent :data="data"/>
     </aside>
 </template>
 

@@ -43,12 +43,12 @@
 <template>
     <div class="text-editor-panel" :draggable="isdraggable">
         <TextEditor v-show="showEditorPanel" :data="data"/>
-        <input
+        <textarea
             type="text" 
             value="Your title"
             @focusin="showTextEditor(true)"
             @focusout="showTextEditor(false)"
-            :style="jsonToString()"/>
+            :style="jsonToString()"></textarea>
     </div>
 </template>
 

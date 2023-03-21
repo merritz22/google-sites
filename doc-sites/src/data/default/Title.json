@@ -1,0 +1,17 @@
+{
+    "id":1,
+    "name":"text",
+    "visible":true,
+    "data":{
+        "id": 1,
+        "name":"Title",
+        "fontFamily": "Arial",
+        "fontSize": 50,
+        "fontWeight": "normal",
+        "fontStyle": "normal",
+        "textDecoration": "none",
+        "color": "black",
+        "textAlign": "left",
+        "delete":false
+    }
+}
