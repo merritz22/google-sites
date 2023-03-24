@@ -45,7 +45,7 @@
         <TextEditor v-show="showEditorPanel" :data="data"/>
         <textarea
             type="text" 
-            value="Your title"
+            value="Your text"
             @focusin="showTextEditor(true)"
             @focusout="showTextEditor(false)"
             :style="jsonToString()"></textarea>

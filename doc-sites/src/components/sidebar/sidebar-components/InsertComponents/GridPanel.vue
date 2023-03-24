@@ -2,7 +2,7 @@
     import { Icon } from '@iconify/vue';
     import { ref } from 'vue';
 
-    import Title from '../../../data/default/Title.json'
+    import Title from '../../../../data/default/Title.json'
 
     const props = defineProps({
         data:{
@@ -52,7 +52,7 @@
             "visible":true,
             "data":{
                 "id": i,
-                "name":"Title",
+                "name":"textBox",
                 "fontFamily": "Helvetica",
                 "fontSize": 30,
                 "fontWeight": "normal",

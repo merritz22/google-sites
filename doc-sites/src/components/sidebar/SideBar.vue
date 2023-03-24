@@ -1,18 +1,8 @@
 <script setup>
     import { ref } from 'vue';
-    import GridPanel from './sidebar-components/GridPanel.vue';
-    import CollapseComponent from './sidebar-components/CollapseComponent.vue';
-    import TableOfContentsComponent from './sidebar-components/TableOfContentsComponent.vue';
-    import ImageCarousselComponent from './sidebar-components/ImageCarousselComponent.vue';
-    import ButtonComponent from './sidebar-components/ButtonComponent.vue';
-    import DividerComponent from './sidebar-components/DividerComponent.vue';
-    import SocialLinksComponent from './sidebar-components/SocialLinksComponent.vue';
-    import PlaceholderComponent from './sidebar-components/PlaceholderComponent.vue';
-    import CalendarComponent from './sidebar-components/CalendarComponent.vue'
-    import MapComponent from './sidebar-components/MapComponent.vue';
-    import DocsComponent from './sidebar-components/DocsComponent.vue';
-    import ChartComponent from './sidebar-components/ChartComponent.vue';
-    import ContentBlock from './sidebar-components/ContentBlock.vue';
+    import Insert from './Insert.vue';
+    import Themes from './Themes.vue';
+    import Pages from './Pages.vue';
 
     const props = defineProps({
         data:{
@@ -25,33 +15,41 @@
             }
         }
     })
+
+    const id = ref(0)
+    function changeSideNavActive(val) {
+        id.value = val
+    }
 </script>
 
 <template>
     <aside class="bg-dark">
         <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
-            <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+            <input type="radio" 
+                class="btn-check" name="btnradio" 
+                id="btnradio1" autocomplete="off" checked
+                @click="changeSideNavActive(1)">
             <label class="btn btn-outline-secondary" for="btnradio1">Themes</label>
 
-            <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+            <input type="radio" class="btn-check" name="btnradio" 
+                id="btnradio2" autocomplete="off"
+                @click="changeSideNavActive(2)">
             <label class="btn btn-outline-secondary" for="btnradio2">Pages</label>
 
-            <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+            <input type="radio" class="btn-check" name="btnradio" 
+                id="btnradio3" autocomplete="off"
+                @click="changeSideNavActive(3)">
             <label class="btn btn-outline-secondary" for="btnradio3">Insert</label>
         </div>
-        <GridPanel :data="data"/>
-        <ContentBlock :data="data"/>
-        <ButtonComponent :data="data"/>
-        <CalendarComponent :data="data"/>
-        <ChartComponent :data="data"/>
-        <CollapseComponent :data="data"/>
-        <DividerComponent :data="data"/>
-        <DocsComponent :data="data"/>
-        <ImageCarousselComponent :data="data"/>
-        <MapComponent :data="data"/>
-        <PlaceholderComponent :data="data"/>
-        <SocialLinksComponent :data="data"/>
-        <TableOfContentsComponent :data="data"/>
+        <div v-if="id == 3">
+            <Insert :data="data"/>
+        </div>
+        <div v-if="id == 1">
+            <Themes/>
+        </div>
+        <div v-if="id == 2">
+            <Pages/>
+        </div>
     </aside>
 </template>
 
