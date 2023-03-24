@@ -170,17 +170,12 @@
 </template>
 
 <style lang="scss" scoped>
-    .color{
-        margin-top: 5px;
-        margin-left: -25px;
-        position: absolute;
-    }
     .text-style-panel{
         background-color: rgb(192, 191, 188);
         display: flex;
         width: fit-content;
         padding: 10px;
-        height: 25px;
+        height: fit-contentn;
         border: none;
         border-radius: 10px;
         align-items: center;

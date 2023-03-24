@@ -1,17 +1,22 @@
 <script setup>
     import { Icon } from '@iconify/vue';
+import { ref } from 'vue';
 
-    const showContent = true
+    const showContent = ref(true)
+    function switches() {
+        showContent.value = !showContent.value
+        console.log('inside')
+    }
 </script>
 
 <template>
     <div class="content-block">
-            <div class="title-panel">
-                <h1>CONTENT BLOCKS</h1>
+            <div class="title-panel" @click="switches">
+                <h5 class="mt-2">CONTENT BLOCKS</h5>
                 <Icon class="up" v-show="showContent" icon="tabler:chevron-up" width="30" height="30" />
                 <Icon class="dpwn" v-show="!showContent" icon="tabler:chevron-down" width="30" height="30" />
             </div>
-            <div class="block-samples">
+            <div class="block-samples" v-show="showContent">
                 <div class="flex-one">
                     <Icon icon="clarity:picture-line" width="50" height="50" />
                     <Icon icon="system-uicons:paragraph-end" width="50" height="50" />
@@ -84,6 +89,8 @@
     .title-panel{
         display: flex;
         justify-content: space-between;
+        text-align: center;
+        cursor: pointer;
 
         svg{
             margin-right: 15px;

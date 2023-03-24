@@ -5,13 +5,13 @@
 </script>
 
 <template>
-    <header :class="{'scrolled-nav': scrollPosition}">
+    <header class="bg-dark">
         <nav>
             <div class="branding">
                 <img src="@/assets/logo.png" alt=""/>
                 <input class="title" :value="title"/>
             </div>
-            <div class="navigation">
+            <div class="navigation bg-dark">
                 <li class="text">
                     M<b style="color: red;">e</b>KA save your work
                     <sup>
@@ -88,7 +88,6 @@
 
         &:hover{
             color: #00afea;
-            border-color: #00afea;
         }
     }
 

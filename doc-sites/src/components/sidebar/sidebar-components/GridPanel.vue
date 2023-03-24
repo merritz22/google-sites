@@ -46,7 +46,7 @@
 
     function addText() {
         let i = count.value++
-        let title = {
+        let textBox = {
             "id":i,
             "name":"text-box",
             "visible":true,
@@ -63,9 +63,9 @@
                 "delete":false
             }
         }
-        t.value.push(title)
+        t.value.push(textBox)
         // console.log(t.value)
-        props.data.push(title)
+        props.data.push(textBox)
     }
 </script>
 

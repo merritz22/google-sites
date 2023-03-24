@@ -5,7 +5,7 @@
 <template>
     <span class="other-tools">
         <Icon icon="iconoir:google-docs" width="30" height="30" />
-        <h1>Docs</h1>
+        <h4>Docs</h4>
     </span>
 </template>
 
@@ -24,7 +24,7 @@
         svg{
             margin-left: 15px;
         }
-        h1{
+        h4{
             margin-left: 10px;
         }
     }

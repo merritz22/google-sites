@@ -5,7 +5,7 @@
 <template>
     <span class="other-tools">
         <Icon icon="raphael:users" width="30" height="30" />
-        <h1>Social links</h1>
+        <h4>Social links</h4>
     </span>
 </template>
 
@@ -24,7 +24,7 @@
         svg{
             margin-left: 15px;
         }
-        h1{
+        h4{
             margin-left: 10px;
         }
     }

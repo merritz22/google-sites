@@ -25,7 +25,7 @@ const data = ref([])
     min-width: 950px;
     max-width: 1350px;
     background-image: url("../assets/hero-bg.png");
-    font-family: 'Courier New', Courier, monospace;
+    font-family: Arial, Helvetica, sans-serif;
   }
   svg{
     cursor: pointer;

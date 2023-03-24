@@ -5,7 +5,7 @@
 <template>
     <span class="other-tools">
         <Icon icon="ic:round-minus" width="30" height="30" />
-        <h1>Divider</h1>
+        <h4>Divider</h4>
     </span>
 </template>
 
@@ -24,7 +24,7 @@
         svg{
             margin-left: 15px;
         }
-        h1{
+        h4{
             margin-left: 10px;
         }
     }

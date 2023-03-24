@@ -28,31 +28,36 @@
 </script>
 
 <template>
-    <aside>
-        <div class="panel">
-            <h1 class="tools-links">Themes</h1>
-            <h1 class="tools-links">Pages</h1>
-            <h1 class="tools-links">Insert</h1>
+    <aside class="bg-dark">
+        <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+            <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+            <label class="btn btn-outline-secondary" for="btnradio1">Themes</label>
+
+            <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+            <label class="btn btn-outline-secondary" for="btnradio2">Pages</label>
+
+            <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+            <label class="btn btn-outline-secondary" for="btnradio3">Insert</label>
         </div>
         <GridPanel :data="data"/>
         <ContentBlock :data="data"/>
-        <CollapseComponent :data="data"/>
-        <TableOfContentsComponent :data="data"/>
-        <ImageCarousselComponent :data="data"/>
         <ButtonComponent :data="data"/>
-        <DividerComponent :data="data"/>
-        <SocialLinksComponent :data="data"/>
-        <PlaceholderComponent :data="data"/>
         <CalendarComponent :data="data"/>
-        <MapComponent :data="data"/>
-        <DocsComponent :data="data"/>
         <ChartComponent :data="data"/>
+        <CollapseComponent :data="data"/>
+        <DividerComponent :data="data"/>
+        <DocsComponent :data="data"/>
+        <ImageCarousselComponent :data="data"/>
+        <MapComponent :data="data"/>
+        <PlaceholderComponent :data="data"/>
+        <SocialLinksComponent :data="data"/>
+        <TableOfContentsComponent :data="data"/>
     </aside>
 </template>
 
 <style lang="scss" scoped>
     aside{
-        font-size: 12px;
+        font-size: 10px;
         display: flex;
         flex-direction: column;
         width: 250px;
@@ -73,33 +78,4 @@
             z-index: 99;
         }
     }
-
-    .panel{
-        display: flex;
-        flex-direction: row;
-        transition: .5s ease all;
-        justify-content: space-between;
-        width: 100%;
-        height: 50px;
-        border-bottom: 1px solid gray;
-        margin: 0;
-
-        .tools-links{
-            transition: .5s ease all;
-            padding-bottom: 6px;
-            border-bottom: 6px solid transparent;
-            margin-left: 8px;
-            margin-right: 10px;
-            height: 22px;
-
-            &:hover{
-                color: #ffff;
-                border-color:gray;
-                cursor: pointer;
-            }
-        }
-    }
-
-
-
 </style>

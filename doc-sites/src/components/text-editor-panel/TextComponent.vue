@@ -41,13 +41,14 @@
 </script>
 
 <template>
-    <div class="text-editor-panel" :draggable="isdraggable">
+    <div class="text-editor-panel" :draggable="isdraggable"
+        @mouseover="showTextEditor(true)"
+        @mouseenter="showTextEditor(true)"
+        @mouseleave="showTextEditor(false)">
         <TextEditor v-show="showEditorPanel" :data="data"/>
         <input
             type="text" 
             value="Your title"
-            @focusin="showTextEditor(true)"
-            @focusout="showTextEditor(false)"
             :style="jsonToString()"/>
     </div>
 </template>
