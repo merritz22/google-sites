@@ -5,15 +5,16 @@ import SideBar from '../components/sidebar/SideBar.vue';
 import WorkingPanel from '../components/WorkingPanel.vue';
 // import data from '../data/components/Components.json'
 const data = ref([])
+const prev = ref(true)
 
 
 </script>
 
 <template>
   <div class="accueil">
-    <Navigation/>
-    <SideBar :data="data"/>
-    <WorkingPanel :data="data"/>
+    <Navigation :prev="prev"/>
+    <SideBar :data="data" :prev="prev"/>
+    <WorkingPanel :data="data" :prev="prev"/>
   </div>
 </template>
 
