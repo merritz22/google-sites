@@ -13,17 +13,27 @@
                     return data
                 }
             }
+        },
+        prev:{
+            type:Boolean,
+            required:true,
+            computed:{
+                changed(){
+                    return prev
+                }
+            }
         }
     })
 
-    const id = ref(0)
+    const id = ref(1)
+    const preview = ref(props.prev)
     function changeSideNavActive(val) {
         id.value = val
     }
 </script>
 
 <template>
-    <aside class="bg-dark">
+    <aside class="bg-dark" v-show="preview">
         <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
             <input type="radio" 
                 class="btn-check" name="btnradio" 

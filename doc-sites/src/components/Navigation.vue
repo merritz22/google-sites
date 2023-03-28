@@ -1,11 +1,31 @@
 <script setup>
     import { Icon } from '@iconify/vue';
-    const scrollPosition = null
+    import { ref } from 'vue';
+
+
+    const props = defineProps({
+        prev:{
+            type:Boolean,
+            required:true,
+            computed:{
+                changed(){
+                    return this.prev
+                }
+            }
+        }
+    })
+
+    const prevw = ref(props.prev)
     const title = 'Merritz-Lab'
+
+    function preview() {
+        console.log(prevw.value)
+        prevw.value = !prevw.value
+    }
 </script>
 
 <template>
-    <header class="bg-dark">
+    <header class="bg-dark" v-show="prevw">
         <nav>
             <div class="branding">
                 <img src="@/assets/logo.png" alt=""/>
@@ -28,7 +48,7 @@
                         <Icon icon="ic:twotone-replay" width="30" height="30" :horizontalFlip="true" />
                     </RouterLink>
                 </li>
-                <li>
+                <li @click="preview">
                     <RouterLink to="" class="link">
                         <Icon icon="fluent:phone-laptop-16-regular" width="30" height="30" />
                     </RouterLink>
