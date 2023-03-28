@@ -1,13 +1,13 @@
 <script setup>
-    import Nav from '../components/themes/Nav.vue';
-    import Header from '../components/themes/Header.vue';
-    import Services from '../components/themes/sections/Services.vue';
-    import Portfolio from '../components/themes/sections/Portfolio.vue';
-    import About from '../components/themes/sections/About.vue';
-    import Team from '../components/themes/sections/Team.vue';
-    import Clients from '../components/themes/sections/Clients.vue';
-    import Contact from '../components/themes/sections/Contact.vue';
-    import Footer from '../components/themes/sections/Footer.vue';
+    import Nav from '../components/themes/agency/Nav.vue';
+    import Header from '../components/themes/agency/Header.vue';
+    import Services from '../components/themes/agency/sections/Services.vue';
+    import Portfolio from '../components/themes/agency/sections/Portfolio.vue';
+    import About from '../components/themes/agency/sections/About.vue';
+    import Team from '../components/themes/agency/sections/Team.vue';
+    import Clients from '../components/themes/agency/sections/Clients.vue';
+    import Contact from '../components/themes/agency/sections/Contact.vue';
+    import Footer from '../components/themes/agency/sections/Footer.vue';
 
 
     window.addEventListener('DOMContentLoaded', event => {
