@@ -1,5 +1,6 @@
 <script setup>
     import { ref } from 'vue';
+    import StartupImage from '../../../components/images/StartupImage.vue';
 
     const editor = ref(true)
     const data = ref([
@@ -15,7 +16,7 @@
     <div v-if="editor" class="navbar navbar-expand-lg navbar-dark bg-dark fixed" id="mainNav">
         <div class="container">
             <a class="navbar-brand" href="#page-top">
-                <img id="nav" src="../../../assets/logo.png"  alt="..." />
+                <StartupImage :id="'fff'"/>
                 Here's M<label class="text-danger">e</label>KA template
             </a>
             <button class="navbar-toggler me-5" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">

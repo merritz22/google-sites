@@ -1,7 +1,14 @@
 <script setup>
     import { Icon } from '@iconify/vue';
+
+    const props = defineProps({
+        size:{
+            type:Object,
+            required: true
+        }
+    })
 </script>
 
 <template>
-    <Icon icon="noto:smiling-face-with-sunglasses" width="20" height="20" />
+    <Icon icon="fa-solid:ellipsis-v" :width="size.width" :height="size.height" :horizontalFlip="true" />
 </template>

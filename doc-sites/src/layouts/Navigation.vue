@@ -1,7 +1,13 @@
 <script setup>
     import { Icon } from '@iconify/vue';
     import { ref } from 'vue';
-import SmileWithSunglass from '../components/icons/SmileWithSunglass.vue';
+    import SmileWithSunglass from '../components/icons/SmileWithSunglass.vue';
+    import BackIcon from '../components/icons/BackIcon.vue';
+import ForwardIcon from '../components/icons/ForwardIcon.vue';
+import PreviewIcon from '../components/icons/PreviewIcon.vue';
+import OptionIcon from '../components/icons/OptionIcon.vue';
+import SettingsIcon from '../components/icons/SettingsIcon.vue';
+import StartupImage from '../components/images/StartupImage.vue';
 
 
     const props = defineProps({
@@ -17,6 +23,14 @@ import SmileWithSunglass from '../components/icons/SmileWithSunglass.vue';
     })
 
     const prevw = ref(props.prev)
+    const navSmileSize = ref({
+        "width":20,
+        "Height": 20
+    })
+    const navIconSize = ref({
+        "width":30,
+        "Height": 30
+    })
     const title = 'Merritz-Lab'
 
     function preview() {
@@ -29,39 +43,39 @@ import SmileWithSunglass from '../components/icons/SmileWithSunglass.vue';
     <header class="bg-dark" v-show="prevw">
         <nav>
             <div class="branding">
-                <img src="@/assets/logo.png" alt=""/>
+                <StartupImage :id="'Static'"/>
                 <input class="title" :value="title"/>
             </div>
             <div class="navigation bg-dark">
                 <li class="text">
                     M<b style="color: red;">e</b>KA save your work
                     <sup>
-                        <SmileWithSunglass/>
+                        <SmileWithSunglass :size="navSmileSize"/>
                     </sup>
                 </li>
                 <li>
                     <RouterLink to="/" class="link">
-                        
+                        <BackIcon :size="navIconSize"/>
                     </RouterLink>
                 </li>
                 <li>
                     <RouterLink to="" class="link">
-                        <Icon icon="ic:twotone-replay" width="30" height="30" :horizontalFlip="true" />
+                        <ForwardIcon :size="navIconSize" />
                     </RouterLink>
                 </li>
                 <li @click="preview">
                     <RouterLink to="" class="link">
-                        <Icon icon="fluent:phone-laptop-16-regular" width="30" height="30" />
+                        <PreviewIcon :size="navIconSize"/>
                     </RouterLink>
                 </li>
                 <li>
                     <RouterLink to="" class="link">
-                        <Icon icon="octicon:gear-16" width="30" height="30" />
+                        <SettingsIcon :size="navIconSize"/>
                     </RouterLink>
                 </li>
                 <li>
                     <RouterLink to="" class="link">
-                        <Icon icon="fa-solid:ellipsis-v" width="30" height="30" />
+                        <OptionIcon :size="{'width':10,'heigth':10}"/>
                     </RouterLink>
                 </li>
             </div>
@@ -117,13 +131,6 @@ import SmileWithSunglass from '../components/icons/SmileWithSunglass.vue';
         align-items: center;
         justify-content: center;
         height: 50px;
-        img{
-            width: 30px;
-            height: 30px;
-            transition: 0.5s ease all;
-            margin-left: 16px;
-            margin-right: 16px;
-        }
     }
 
     .navigation{
