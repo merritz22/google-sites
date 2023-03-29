@@ -1,8 +1,8 @@
 <script setup>
 import { ref, watch} from 'vue';
-import Navigation from '../components/Navigation.vue';
-import SideBar from '../components/sidebar/SideBar.vue';
-import WorkingPanel from '../components/WorkingPanel.vue';
+import Navigation from '../layouts/Navigation.vue';
+import SideBar from '../layouts/sidebar/SideBar.vue';
+import WorkingPanel from '../layouts/WorkingPanel.vue';
 // import data from '../data/components/Components.json'
 const data = ref([])
 const prev = ref(true)

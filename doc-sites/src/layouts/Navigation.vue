@@ -1,6 +1,7 @@
 <script setup>
     import { Icon } from '@iconify/vue';
     import { ref } from 'vue';
+import SmileWithSunglass from '../components/icons/SmileWithSunglass.vue';
 
 
     const props = defineProps({
@@ -35,12 +36,12 @@
                 <li class="text">
                     M<b style="color: red;">e</b>KA save your work
                     <sup>
-                        <Icon icon="noto:smiling-face-with-sunglasses" width="20" height="20" />
+                        <SmileWithSunglass/>
                     </sup>
                 </li>
                 <li>
                     <RouterLink to="/" class="link">
-                        <Icon icon="ic:twotone-replay" width="30" height="30" />
+                        
                     </RouterLink>
                 </li>
                 <li>

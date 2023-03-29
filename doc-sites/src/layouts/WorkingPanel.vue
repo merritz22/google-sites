@@ -2,7 +2,7 @@
     import { ref } from 'vue';
     import ButtonComponent from './working-panel-components/ButtonComponent.vue';
     import Router from './working-panel-components/Router.vue';
-    import Themes from '../layouts/Themes.vue';
+    import Themes from './Themes.vue';
 
     const props = defineProps({
         data:{

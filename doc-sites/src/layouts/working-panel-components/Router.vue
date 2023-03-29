@@ -1,7 +1,7 @@
 <script setup>
     import { ref } from 'vue';
-    import CommentComponent from '../text-editor-panel/CommentComponent.vue';
-    import TextComponent from '../text-editor-panel/TextComponent.vue';
+    import TextComponent from '../../components/text-editor-panel/TextComponent.vue';
+    import TextEditor from '../../components/text-editor-panel/TextEditor.vue';
 
     const props = defineProps({
         data:{
