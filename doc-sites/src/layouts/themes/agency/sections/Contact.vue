@@ -62,7 +62,7 @@
 <style scoped>
 section#contact {
   background-color: #212529;
-  background-image: url("../../../../assets/pages/img/map-image.png");
+  background-image: url("@/assets/themes/agency/map-image.png");
   background-repeat: no-repeat;
   background-position: center;
 }

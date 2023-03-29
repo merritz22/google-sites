@@ -13,7 +13,7 @@
 </script>
 
 <template>
-    <div v-if="editor" class="navbar navbar-expand-lg navbar-dark bg-dark fixed" id="mainNav">
+    <div v-if="!editor" class="navbar navbar-expand-lg navbar-dark bg-dark fixed" id="mainNav">
         <div class="container">
             <a class="navbar-brand" href="#page-top">
                 <StartupImage :id="'fff'"/>
@@ -35,7 +35,7 @@
         </div>
     </div>
 
-    <div v-if="!editor" class="navbar navbar-expand-lg navbar-dark bg-dark fixed" id="mainNav">
+    <div v-if="editor" class="navbar navbar-expand-lg navbar-dark bg-dark fixed" id="mainNav">
         <div class="container">
             <a class="navbar-brand" href="#page-top">
                 <img id="nav" src="../../../assets/logo.png"  alt="..." />

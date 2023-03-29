@@ -54,7 +54,7 @@
   padding-top: 8rem;
   padding-bottom: 8rem;
   text-align: center;
-  background-image: url('../../../assets/pages/img/header-bg.jpg');
+  background-image: url('@/assets/themes/agency/header-bg.jpg');
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
