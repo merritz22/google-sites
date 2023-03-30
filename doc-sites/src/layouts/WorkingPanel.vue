@@ -22,6 +22,10 @@
                     return this.prev
                 }
             }
+        },
+        mainClass:{
+            type:String,
+            required:true
         }
     })
 
@@ -39,43 +43,57 @@
 </script>
 
 <template>
-    <section v-if="custom == 0" class="lab-panel">
-        <ButtonComponent @vnode-mounted="myEvent"/>
-        <Router v-for="component in components" 
+    <div :class="mainClass">
+        <section v-if="custom == 0" class="lab-panel bg-light">
+            <Router v-for="component in components"
+            v-bind:key="component.id" 
             :data="component"/>
-    </section>
-    <section v-if="custom == 1" class="lab-panel border-1" id="theme-section">
-        <Themes/>
-    </section>
-    <section v-if="custom == 2"></section>
-    <section v-if="custom == 3"></section>
-    <section v-if="custom == 4"></section>
+        </section>
+        <section v-if="custom == 1" class="lab-panel border-1" id="theme-section">
+            <Themes/>
+        </section>
+        <section v-if="custom == 2"></section>
+        <section v-if="custom == 3"></section>
+        <section v-if="custom == 4"></section>
+    </div>
 </template>
 
 <style lang="scss">
-    .preview{
-        margin: 0;
-    }
-    .lab-panel{
-        display: block;
+    .working-tab{
         margin-top: 70px;
         margin-left: 275px;
         position: fixed;
-        border-radius: 10px;
         width: 79%;
-        height: 78%;
-        background-color: none;
+        height: 94%;
+        // border: 2px solid red;
+        transition: 1.5s ease all;
+    }
+    .working-tab-off{
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        // border: 2px solid red;
+        position: fixed;
+        transition: 1.5s ease all;
+    }
+    .lab-panel{
+        display: block;
+        position: relative;
+        border-radius: 10px;
+        width: 100%;
+        height: 90%;
         transition: 1.5s ease all;
         // opacity: .35;
         text-align: center;
         // overflow: hidden;
         color: white;
+        // border: 2px solid red;
         #nav{
             width: 30px;
             height: 30px;
             transition: 0.5s ease all;
-            margin-left: 16px;
-            margin-right: 16px;
+            margin-left: 5px;
+            margin-right: 5px;
         }
     }
     

@@ -6,15 +6,21 @@ import WorkingPanel from '../layouts/WorkingPanel.vue';
 // import data from '../data/components/Components.json'
 const data = ref([])
 const prev = ref(true)
+const workingClass = ref('working-tab')
 
-
+function hideEveryThing(emitProps) {
+  prev.value = emitProps.value
+  workingClass.value = 'working-tab-off'
+}
 </script>
 
 <template>
   <div class="accueil">
-    <Navigation :prev="prev"/>
+    <Navigation :prev="prev"
+    @switch-to-preview="hideEveryThing"/>
     <SideBar :data="data" :prev="prev"/>
-    <WorkingPanel :data="data" :prev="prev"/>
+    <WorkingPanel :data="data" :prev="prev"
+    :main-class="workingClass"/>
   </div>
 </template>
 

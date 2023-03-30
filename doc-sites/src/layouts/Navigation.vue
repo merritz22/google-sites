@@ -1,13 +1,12 @@
 <script setup>
-    import { Icon } from '@iconify/vue';
-    import { ref } from 'vue';
+    import { ref, defineEmits } from 'vue';
     import SmileWithSunglass from '../components/icons/SmileWithSunglass.vue';
     import BackIcon from '../components/icons/BackIcon.vue';
-import ForwardIcon from '../components/icons/ForwardIcon.vue';
-import PreviewIcon from '../components/icons/PreviewIcon.vue';
-import OptionIcon from '../components/icons/OptionIcon.vue';
-import SettingsIcon from '../components/icons/SettingsIcon.vue';
-import StartupImage from '../components/images/StartupImage.vue';
+    import ForwardIcon from '../components/icons/ForwardIcon.vue';
+    import PreviewIcon from '../components/icons/PreviewIcon.vue';
+    import OptionIcon from '../components/icons/OptionIcon.vue';
+    import SettingsIcon from '../components/icons/SettingsIcon.vue';
+    import StartupImage from '../components/images/StartupImage.vue';
 
 
     const props = defineProps({
@@ -21,7 +20,7 @@ import StartupImage from '../components/images/StartupImage.vue';
             }
         }
     })
-
+    const emit = defineEmits(['switchToPreview'])
     const prevw = ref(props.prev)
     const navSmileSize = ref({
         "width":20,
@@ -34,8 +33,8 @@ import StartupImage from '../components/images/StartupImage.vue';
     const title = 'Merritz-Lab'
 
     function preview() {
-        console.log(prevw.value)
         prevw.value = !prevw.value
+        emit('switchToPreview',prevw)
     }
 </script>
 
