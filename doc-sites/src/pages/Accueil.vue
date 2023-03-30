@@ -3,7 +3,6 @@ import { ref, watch} from 'vue';
 import Navigation from '../layouts/Navigation.vue';
 import SideBar from '../layouts/sidebar/SideBar.vue';
 import WorkingPanel from '../layouts/WorkingPanel.vue';
-// import data from '../data/components/Components.json'
 const data = ref([])
 const prev = ref(true)
 const workingClass = ref('working-tab')
@@ -11,6 +10,22 @@ const workingClass = ref('working-tab')
 function hideEveryThing(emitProps) {
   prev.value = emitProps.value
   workingClass.value = 'working-tab-off'
+  document.addEventListener('keydown',(e)=>{
+    const nom = e.key
+    const code = e.code
+
+    if (nom == 'Control') {
+      //On ne realise aucune action
+      return
+    }
+
+    if (e.ctrlKey && code == 'Digit1') {
+      workingClass.value = 'working-tab'
+      setTimeout(() => {
+        prev.value = true
+      }, 800);
+    }
+  },false)
 }
 </script>
 

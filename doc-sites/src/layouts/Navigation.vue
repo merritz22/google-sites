@@ -33,15 +33,15 @@
     const title = 'Merritz-Lab'
 
     function preview() {
-        prevw.value = !prevw.value
-        emit('switchToPreview',prevw)
+        emit('switchToPreview',ref(false))
     }
 </script>
 
 <template>
-    <header class="bg-dark" v-show="prevw">
+    <header class="bg-dark" v-show="prev">
         <nav>
             <div class="branding">
+                <!-- l'id sera utiliser pour determinier si l'on peut changer l'icon ou pas -->
                 <StartupImage :id="'Static'"/>
                 <input class="title" :value="title"/>
             </div>
