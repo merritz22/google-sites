@@ -59,7 +59,7 @@ responsiveNavItems.map(function (responsiveNavItem) {
 </script>
 
 <template>
-    <div class="container-themes">
+    <div class="container-themes bg-light">
         <!-- navigation Links-->
         <Nav/>
         <div class="container-themes-body">
@@ -85,13 +85,13 @@ responsiveNavItems.map(function (responsiveNavItem) {
 
 <style scoped>
 .container-themes{
-    border: 2px solid blue;
+    /* border: 2px solid blue; */
     overflow-y: hidden;
     height: 100%;
     width: 100%;
 }
 .container-themes-body{
-    border: 2px solid blue;
+    /* border: 2px solid blue; */
     overflow-y: scroll;
     height: 95%;
     width: 100%;

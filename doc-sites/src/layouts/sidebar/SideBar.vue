@@ -29,6 +29,10 @@
     function changeSideNavActive(val) {
         id.value = val
     }
+
+    function captureLoadingThemeEmit(emitD) {
+        console.log(emitD.header)
+    }
 </script>
 
 <template>
@@ -54,7 +58,7 @@
             <Insert :data="data"/>
         </div>
         <div v-if="id == 1">
-            <Themes/>
+            <Themes @load-themes-data="captureLoadingThemeEmit"/>
         </div>
         <div v-if="id == 2">
             <Pages/>

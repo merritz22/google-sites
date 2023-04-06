@@ -1,8 +1,13 @@
 <script setup>
     import { ref } from 'vue';
+    import Input from '../../../components/tags/Input.vue'
     import StartupImage from '../../../components/images/StartupImage.vue';
 
-    const editor = ref(true)
+    const props = defineProps({
+        
+    })
+
+    const editor = ref(false)
     const links = ref([
         'services','portfolio','about','team','contact'
     ])
@@ -14,44 +19,25 @@
 
 <template>
     <div>
-        <div v-if="!editor" class="navbar navbar-expand-lg navbar-dark bg-dark fixed" id="mainNav">
+        <div class="navbar navbar-expand-lg navbar-dark bg-dark fixed" id="mainNav">
             <div class="container">
                 <a class="navbar-brand" href="#page-top">
                     <StartupImage :id="'fff'"/>
-                    Here's M<label class="text-danger">e</label>KA template
+                    <label class="text-light" v-if="editor">MeKA template</label>
+                    <Input :text="'MeKA template'" class="text-light" v-if="!editor"/>
                 </a>
                 <button class="navbar-toggler me-5" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                    Menu
+                    <Input :text="'Menu'" class="text-light" v-if="!editor"/>
+                    <label v-if="editor">Menu</label>
                     <i class="fas fa-bars ms-1"></i>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
                         <li v-for="link in links" :key="link" class="nav-item">
-                            <a class="nav-link" >
+                            <Input :text="link" class="nav-link" v-if="!editor"/>
+                            <a class="nav-link" v-if="editor">
                                 {{link}}
                             </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div v-if="editor" class="navbar navbar-expand-lg navbar-dark bg-dark fixed" id="mainNav">
-            <div class="container">
-                <a class="navbar-brand" href="#page-top">
-                    <img id="nav" src="../../../assets/logo.png"  alt="..." />
-                    Here's M<label class="text-danger">e</label>KA template
-                </a>
-                <button class="navbar-toggler me-5" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                    Menu
-                    <i class="fas fa-bars ms-1"></i>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
-                        <li v-for="link in links" :key="link" class="nav-item">
-                            <input class="nav-link bg-transparent border-0 text-center"
-                            @change="updateNavLink"
-                            :value="link" :id="link"/>
                         </li>
                     </ul>
                 </div>
@@ -62,7 +48,7 @@
 
 <style scoped>
     input{
-        width: 120px;
+        width: 150px;
         outline: none;
     }
 </style>

@@ -5,7 +5,7 @@
     id="mainNav">
         <div class="container">
             <a class="navbar-brand text-uppercase fw-bold d-lg-none" href="#">
-                Bienvenue A l'UDs
+                Welcome to UDs
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
             data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
@@ -15,16 +15,16 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mx-auto fw-bold fs-5">
                     <li class="nav-item px-lg-4">
-                        <a class="nav-link text-uppercase" href="#">Accueil</a>
+                        <a class="nav-link text-uppercase" href="#">Home</a>
                     </li>
                     <li class="nav-item px-lg-4">
-                        <a class="nav-link text-uppercase" href="#">These</a>
+                        <a class="nav-link text-uppercase" href="#">About</a>
                     </li>
                     <li class="nav-item px-lg-4">
-                        <a class="nav-link text-uppercase" href="#">Cours</a>
+                        <a class="nav-link text-uppercase" href="#">Products</a>
                     </li>
                     <li class="nav-item px-lg-4">
-                        <a class="nav-link text-uppercase" href="#">Projets</a>
+                        <a class="nav-link text-uppercase" href="#">Program</a>
                     </li>
                 </ul>
             </div>

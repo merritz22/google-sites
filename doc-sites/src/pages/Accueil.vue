@@ -27,6 +27,7 @@ function hideEveryThing(emitProps) {
     }
   },false)
 }
+
 </script>
 
 <template>

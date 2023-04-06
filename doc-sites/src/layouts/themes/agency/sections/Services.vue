@@ -1,7 +1,7 @@
 <script setup></script>
 
 <template>
-    <section class="page-section bg-light" id="services">
+    <section class="page-section bg-light text-dark" id="services" >
         <div class="container">
             <div class="text-center">
                 <h2 class="section-heading text-uppercase">Services</h2>

@@ -1,8 +1,43 @@
-<script setup></script>
+<script setup>
+    import { ref, defineEmits } from 'vue';
+
+
+    const emit = defineEmits(['load-themes-data'])
+
+    function loadTheme(e) {
+        // chargement du style et du texte depuis le backend.
+        const style = {}
+        const data = ref({
+            "header":[
+                {"subheading":"Bienvenue au studio"},
+                {"heading":"editez du contenue"},
+                {"link":"En savoir plus"},
+            ],
+            "nav":['Services','Portfolio','About','Team','Contact'],
+            "section":
+                [
+                    {
+                        "title":{
+                            "title":"Section Title",
+                            "subtitle":"Lorem ipsum dolor sit amet consectetur."
+                        },
+                        "body":[
+                                {"title":"A title Here"},
+                                {"body":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit."}
+                            ]
+                    }
+                ]
+        })
+
+        //puis emmition de celles ci vers la zone de travaille ou elle seront chargees.
+        emit('load-themes-data',data.value)
+    }
+    
+</script>
 
 <template>
     <div>
-        <div class="card m-2 text-bg-dark" >
+        <div class="card m-2 text-bg-dark" @click="loadTheme">
             <img src="@/assets/themes/agency/header-bg.jpg" 
             class="card-img" alt="toto">
             <div class="card-img-overlay">
